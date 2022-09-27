@@ -1,0 +1,100 @@
+.e,
+.l {
+  margin:50px;
+  float:left;
+    width:200px;
+  height:350px;
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-template-rows:repeat(7,1fr);
+}
+.e div,
+.l div {
+  background:black;
+}
+.one {
+        grid-column:2 / span 3
+        
+}
+.two {
+  grid-row:1 / span 7
+}
+.th {
+  grid-column:2 / span 3;
+  grid-row:4 / span 1
+}
+.fo {
+  grid-column:2 / span 3;
+  grid-row:7 / span 1
+}
+.fi {
+  grid-row:1/ span 7
+}
+.si {
+  grid-column:2 / span 3;
+  grid-row:7 / span 1
+}
+.e::before {
+  content:"";
+  position:absolute;
+  top:5px;
+  right:5px;
+  width:40px;
+  height:40px;
+  background:yellow;
+  animation:bal 7s linear 
+}
+@keyframes bal {
+  10%{
+    transform:translate(-150px,0)
+  }
+  20%{
+  transform:translate(-150px,150px)
+  }
+  30%{
+    transform:translate(0,150px)
+  }
+  40%{
+    transform:translate(-150px,150px)
+  }
+  50%{
+    transform:translate(-150px,300px)
+  }
+  60%{
+    transform:translate(0,300px)
+  }
+  70%{
+    transform:translate(-150px,300px)
+  }
+  90%{
+    transform:translate(-150px,0)
+  }
+}
+.l::before {
+  content:"";
+  position:absolute;
+  top:5px;
+  left:5px;
+  width:40px;
+  height:40px;
+  background:yellow;
+  animation:ball 4s linear 7s
+}
+@keyframes ball {
+  35%{
+    transform:translate(0,300px)
+  }
+  50%{
+    transform:translate(150px,300px)
+  }
+  65%{
+    transform:translate(0,300px)
+  }
+}
+
+
+
+
+
+
